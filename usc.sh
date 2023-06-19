@@ -6,7 +6,7 @@ if [[ -n "${DEBUG-}" ]]; then set -ex; fi
 
 # Global variables +++
 
-_LIBUSC="libusc"
+_LIBUSC="$(dirname "${0}")/libusc"
 
 # Global variables ---
 
@@ -110,8 +110,6 @@ function usc_help()
 
 
 # Main +++
-
-cd "$(dirname "${0}")"
 
 _LIBUSC_PLUGINS_ARRAY=($(find "${_LIBUSC}" -name "*.sh" -type f))
 for _LIBUSC_PLUGIN in "${_LIBUSC_PLUGINS_ARRAY[@]}"
