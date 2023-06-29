@@ -33,7 +33,7 @@ _CMD_HINT["hash"]="Hash files recursively"
 _CMD_FUNC["hash"]="systools_hash"
 function systools_hash()
 {
-    find ${@} -type f -print0 | sort --zero-terminated | xargs --null md5sum | md5sum | cut -d ' ' --fields=1
+    find "${@}" -type f -print0 | sort --zero-terminated | xargs --null md5sum | md5sum | cut -d ' ' --fields=1
 }
 
 if [[ -d /opt/zapret ]]
