@@ -47,6 +47,16 @@ Universal Scripts Collection - Automate daily *nix routines in one click!
 - pip-review
 - pip-autoremove
 - Jupyter Notebook
+- Compression
+    - tar
+    - gzip
+    - bzip2
+    - xz
+    - zip
+    - unzip
+    - 7z
+    - rar
+    - unrar
 
 Optional:
 - Zapret
