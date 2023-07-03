@@ -11,6 +11,7 @@ Universal Scripts Collection - Automate daily *nix routines in one click!
         - Arch Linux w/yay
         - MSYS2
         - Termux
+        - Debian
         - Ubuntu
     - Universal package manager wrapper
     - PIP wrapper

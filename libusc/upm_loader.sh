@@ -165,6 +165,38 @@ function upm_load_termux()
     }
 }
 
+function upm_load_debian()
+{
+    function upm_reindex()
+    {
+        sudo apt update
+    }
+    function upm_upgrade()
+    {
+        sudo apt full-upgrade --yes
+        if [[ "$(command -v flatpak)" ]]
+        then
+            flatpak update
+        fi
+    }
+    function upm_autorem()
+    {
+        sudo apt autoremove --yes
+    }
+    function upm_autoclr()
+    {
+        sudo apt autoclean
+    }
+    function upm_install()
+    {
+        sudo apt install ${@}
+    }
+    function upm_delpkgs()
+    {
+        sudo apt purge ${@}
+    }
+}
+
 function upm_load_ubuntu()
 {
     function upm_reindex()
@@ -232,6 +264,9 @@ function upm_load()
             ;;
         "Android")
             upm_load_termux
+            ;;
+        "Debian GNU/Linux")
+            upm_load_debian
             ;;
         "Ubuntu")
             upm_load_ubuntu
