@@ -40,7 +40,9 @@ function upm_ota_usc()
     local _back_dir="$(pwd)"
     cd "$(dirname "${0}")"
 
-    git pull --verbose
+    git reset --hard
+    git clean -d --force
+    git pull --rebase
 
     cd "${_back_dir}"
 }
