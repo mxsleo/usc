@@ -33,7 +33,8 @@ function upm_load_arch_aur()
     }
     function upm_autoclr()
     {
-        sudo pacman --sync --clean -c
+        sudo paccache --remove --uninstalled
+        sudo paccache --remove --keep 1
     }
     function upm_install()
     {
@@ -82,7 +83,8 @@ function upm_load_arch()
     }
     function upm_autoclr()
     {
-        sudo pacman --sync --clean -c
+        sudo paccache --remove --uninstalled
+        sudo paccache --remove --keep 1
     }
     function upm_install()
     {
@@ -125,7 +127,8 @@ function upm_load_msys2()
     }
     function upm_autoclr()
     {
-        pacman --sync --clean -c
+        paccache --remove --uninstalled
+        paccache --remove --keep 1
     }
     function upm_install()
     {
